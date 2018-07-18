@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
-export default class MainPage extends Component {
+export default class Campaign extends Component {
   render() {
     return (
       <div>
-        <p>Prueba</p>
+        <p>Campaign</p>
       </div>
     )
   }

@@ -1,4 +1,5 @@
-# outvio
+# Nanocorp
 
-Instalarlo con ```yarn install```
-Arrancar con ```yarn start```
+Install with ```yarn install```
+
+Run with ```yarn start```

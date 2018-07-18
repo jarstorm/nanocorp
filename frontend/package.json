@@ -1,12 +1,12 @@
 {
-  "name": "outvio",
+  "name": "nanocorp",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
     "start": "webpack-dev-server"
   },
-  "repository": "https://github.com/jarstorm/outvio.git",
+  "repository": "https://github.com/jarstorm/nanocorp.git",
   "author": "jabad",
   "license": "MIT",
   "devDependencies": {
@@ -23,7 +23,10 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "jest": "^22.1.4",
     "node-sass": "^4.7.2",
+    "react-redux": "^5.0.7",
     "react-test-renderer": "^16.2.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
     "webpack": "^3.10.0",
@@ -33,6 +36,8 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "reactstrap": "^5.0.0-alpha.4"
   }
 }
