@@ -14,6 +14,7 @@
 		<jersey.version>1.8</jersey.version>
 		<junit.version>4.11</junit.version>
 		<mysql.version>6.0.6</mysql.version>
+		<jackson.version>2.9.6</jackson.version>
 	</properties>
 
 	<parent>
@@ -44,13 +45,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.version}</version>
 		</dependency>
-		<!-- Jersey -->
+		<!-- Jackson -->
 		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-client</artifactId>
-			<scope>test</scope>
-			<version>${jersey.version}</version>
-		</dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
+		<version>${jackson.version}</version>
+	</dependency>
 		<!-- JUnit -->
 		<dependency>
 			<groupId>junit</groupId>
