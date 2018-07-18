@@ -6,8 +6,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class JsonCreatives {
 
 	private String header;
-	private String header1;
-	private String header2;
+	private String header_1;
+	private String header_2;
 	private String description;
 	private String url;
 	private String image;
@@ -20,20 +20,20 @@ public class JsonCreatives {
 		this.header = header;
 	}
 
-	public String getHeader1() {
-		return header1;
+	public String getHeader_1() {
+		return header_1;
 	}
 
-	public void setHeader1(String header1) {
-		this.header1 = header1;
+	public void setHeader_1(String header_1) {
+		this.header_1 = header_1;
 	}
 
-	public String getHeader2() {
-		return header2;
+	public String getHeader_2() {
+		return header_2;
 	}
 
-	public void setHeader2(String header2) {
-		this.header2 = header2;
+	public void setHeader_2(String header_2) {
+		this.header_2 = header_2;
 	}
 
 	public String getDescription() {

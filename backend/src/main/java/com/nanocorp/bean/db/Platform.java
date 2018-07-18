@@ -31,6 +31,12 @@ public class Platform implements Serializable {
 	@Column(name = "P_REMAINING_BUDGET")
 	private int remainingBudget;
 
+	@OneToOne(mappedBy = "platform", cascade = CascadeType.ALL)
+	private Creative creative;
+
+	@OneToOne(mappedBy = "platform", cascade = CascadeType.ALL)
+	private Insights insights;
+
 	public long getId() {
 		return id;
 	}
@@ -71,4 +77,11 @@ public class Platform implements Serializable {
 		this.remainingBudget = remainingBudget;
 	}
 
+	public Creative getCreative() {
+		return creative;
+	}
+
+	public void setCreative(Creative creative) {
+		this.creative = creative;
+	}
 }

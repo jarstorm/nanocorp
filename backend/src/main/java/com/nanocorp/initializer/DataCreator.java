@@ -9,8 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.nanocorp.bean.db.*;
-import com.nanocorp.bean.json.JsonCampaign;
-import com.nanocorp.bean.json.JsonPlatform;
+import com.nanocorp.bean.json.*;
 import com.nanocorp.dao.CampaignRepository;
 import com.nanocorp.dao.PlatformTypeRepository;
 
@@ -84,8 +83,25 @@ public class DataCreator {
 		platform.setTotalBudget(jsonPlatform.getTotal_budget());
 		platform.setStatus(jsonPlatform.getStatus());
 		platform.setRemainingBudget(jsonPlatform.getRemaining_budget());
-
+		platform.setCreative(readCreativesData(jsonPlatform.getCreatives()));
 		return platform;
 	}
+
+	/**
+	 * Read creative data
+	 * @param jsonCreatives json creative data
+	 * @return creative data to insert in database
+	 */
+	private Creative readCreativesData(JsonCreatives jsonCreatives) {
+		Creative creative = new Creative();
+		creative.setDescription(jsonCreatives.getDescription());
+		creative.setHeader(jsonCreatives.getHeader());
+		creative.setHeader1(jsonCreatives.getHeader_1());
+		creative.setHeader2(jsonCreatives.getHeader_2());
+		creative.setImage(jsonCreatives.getImage());
+		creative.setUrl(jsonCreatives.getUrl());
+		return creative;
+	}
+
 
 }
