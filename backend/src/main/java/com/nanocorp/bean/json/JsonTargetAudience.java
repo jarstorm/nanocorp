@@ -9,7 +9,7 @@ public class JsonTargetAudience {
 
 	private List<String> languages;
 	private List<String> genders;
-	private List<String> age_range;
+	private List<Integer> age_range;
 	private List<String> locations;
 	private List<String> interests;
 	private List<String> keyWords;
@@ -30,11 +30,11 @@ public class JsonTargetAudience {
 		this.genders = genders;
 	}
 
-	public List<String> getAge_range() {
+	public List<Integer> getAge_range() {
 		return age_range;
 	}
 
-	public void setAge_range(List<String> age_range) {
+	public void setAge_range(List<Integer> age_range) {
 		this.age_range = age_range;
 	}
 

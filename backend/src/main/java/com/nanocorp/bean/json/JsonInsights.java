@@ -2,76 +2,77 @@ package com.nanocorp.bean.json;
 
 public class JsonInsights {
 
-	private String impressions;
-	private String clicks;
-	private String nanos_score;
-	private String cost_per_click;
-	private String click_through_rate;
-	private String advanced_kpi_1;
-	private String advanced_kpi_2;
-	private String website_visits;
+	private long impressions;
+	private long clicks;
+	private long website_visits;
+	private float nanos_score;
+	private float cost_per_click;
+	private float click_through_rate;
+	private float advanced_kpi_1;
+	private float advanced_kpi_2;
 
-	public String getImpressions() {
+	public long getImpressions() {
 		return impressions;
 	}
 
-	public void setImpressions(String impressions) {
+	public void setImpressions(long impressions) {
 		this.impressions = impressions;
 	}
 
-	public String getClicks() {
+	public long getClicks() {
 		return clicks;
 	}
 
-	public void setClicks(String clicks) {
+	public void setClicks(long clicks) {
 		this.clicks = clicks;
 	}
 
-	public String getNanos_score() {
-		return nanos_score;
-	}
-
-	public void setNanos_score(String nanos_score) {
-		this.nanos_score = nanos_score;
-	}
-
-	public String getCost_per_click() {
-		return cost_per_click;
-	}
-
-	public void setCost_per_click(String cost_per_click) {
-		this.cost_per_click = cost_per_click;
-	}
-
-	public String getClick_through_rate() {
-		return click_through_rate;
-	}
-
-	public void setClick_through_rate(String click_through_rate) {
-		this.click_through_rate = click_through_rate;
-	}
-
-	public String getAdvanced_kpi_1() {
-		return advanced_kpi_1;
-	}
-
-	public void setAdvanced_kpi_1(String advanced_kpi_1) {
-		this.advanced_kpi_1 = advanced_kpi_1;
-	}
-
-	public String getAdvanced_kpi_2() {
-		return advanced_kpi_2;
-	}
-
-	public void setAdvanced_kpi_2(String advanced_kpi_2) {
-		this.advanced_kpi_2 = advanced_kpi_2;
-	}
-
-	public String getWebsite_visits() {
+	public long getWebsite_visits() {
 		return website_visits;
 	}
 
-	public void setWebsite_visits(String website_visits) {
+	public void setWebsite_visits(long website_visits) {
 		this.website_visits = website_visits;
 	}
+
+	public float getNanos_score() {
+		return nanos_score;
+	}
+
+	public void setNanos_score(float nanos_score) {
+		this.nanos_score = nanos_score;
+	}
+
+	public float getCost_per_click() {
+		return cost_per_click;
+	}
+
+	public void setCost_per_click(float cost_per_click) {
+		this.cost_per_click = cost_per_click;
+	}
+
+	public float getClick_through_rate() {
+		return click_through_rate;
+	}
+
+	public void setClick_through_rate(float click_through_rate) {
+		this.click_through_rate = click_through_rate;
+	}
+
+	public float getAdvanced_kpi_1() {
+		return advanced_kpi_1;
+	}
+
+	public void setAdvanced_kpi_1(float advanced_kpi_1) {
+		this.advanced_kpi_1 = advanced_kpi_1;
+	}
+
+	public float getAdvanced_kpi_2() {
+		return advanced_kpi_2;
+	}
+
+	public void setAdvanced_kpi_2(float advanced_kpi_2) {
+		this.advanced_kpi_2 = advanced_kpi_2;
+	}
+
 }

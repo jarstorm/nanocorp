@@ -2,10 +2,12 @@ package com.nanocorp;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import com.nanocorp.bean.db.Campaign;
+import com.nanocorp.service.CampaignService;
 
 /**
  * Example controller.
@@ -14,9 +16,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/example")
 public class ExampleController {
 
-	@GetMapping("/sayHello")
+	@Autowired
+	private CampaignService campaignService;
+
+	@GetMapping("/{id}")
 	@ResponseBody
-	public String sayHello(HttpServletRequest request) {
-		return "Hello";
+	public Campaign sayHello(@PathVariable long id, HttpServletRequest request) {
+		return campaignService.findById(id);
 	}
 }

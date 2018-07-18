@@ -42,7 +42,7 @@ public class Creative implements Serializable {
 	@Lob
 	private String image;
 
-	@OneToOne
+	@OneToOne(mappedBy="creative")
 	@PrimaryKeyJoinColumn
 	private Platform platform;
 

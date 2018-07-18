@@ -5,11 +5,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.nanocorp.bean.db.Campaign;
+import com.nanocorp.bean.db.Interest;
 
 @Repository
-public interface CampaignRepository extends JpaRepository<Campaign, Long> {
+public interface InterestRepository extends JpaRepository<Interest, Long> {
 
-	@Query("from Campaign")
-	Campaign findByUsername(@Param("username") String username);
+	@Query("from Interest where code = :code")
+	Interest findByCode(@Param("code") String code);
+
 }

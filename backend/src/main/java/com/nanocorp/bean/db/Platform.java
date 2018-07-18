@@ -31,11 +31,17 @@ public class Platform implements Serializable {
 	@Column(name = "P_REMAINING_BUDGET")
 	private int remainingBudget;
 
-	@OneToOne(mappedBy = "platform", cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "C_ID")
 	private Creative creative;
 
-	@OneToOne(mappedBy = "platform", cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "P_ID")
 	private Insights insights;
+
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "TA_ID")
+	private TargetAudience targetAudience;
 
 	public long getId() {
 		return id;
@@ -83,5 +89,21 @@ public class Platform implements Serializable {
 
 	public void setCreative(Creative creative) {
 		this.creative = creative;
+	}
+
+	public Insights getInsights() {
+		return insights;
+	}
+
+	public void setInsights(Insights insights) {
+		this.insights = insights;
+	}
+
+	public TargetAudience getTargetAudience() {
+		return targetAudience;
+	}
+
+	public void setTargetAudience(TargetAudience targetAudience) {
+		this.targetAudience = targetAudience;
 	}
 }
