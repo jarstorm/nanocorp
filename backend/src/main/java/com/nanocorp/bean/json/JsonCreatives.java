@@ -1,9 +1,9 @@
-package com.nanocorp.bean;
+package com.nanocorp.bean.json;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Creatives {
+public class JsonCreatives {
 
 	private String header;
 	private String header1;

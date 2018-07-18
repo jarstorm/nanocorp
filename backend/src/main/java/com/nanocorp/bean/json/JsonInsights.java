@@ -1,6 +1,6 @@
-package com.nanocorp.bean;
+package com.nanocorp.bean.json;
 
-public class Insights {
+public class JsonInsights {
 
 	private String impressions;
 	private String clicks;

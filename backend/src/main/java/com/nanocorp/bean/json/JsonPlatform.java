@@ -1,14 +1,14 @@
-package com.nanocorp.bean;
+package com.nanocorp.bean.json;
 
-public class Platform {
+public class JsonPlatform {
 	private String status;
-	private String total_budget;
-	private String remaining_budget;
+	private int total_budget;
+	private int remaining_budget;
 	private String start_date;
 	private String end_date;
-	private TargetAudiance target_audiance;
-	private Creatives creatives;
-	private Insights insights;
+	private JsonTargetAudience target_audiance;
+	private JsonCreatives creatives;
+	private JsonInsights insights;
 
 	public String getStatus() {
 		return status;
@@ -18,19 +18,19 @@ public class Platform {
 		this.status = status;
 	}
 
-	public String getTotal_budget() {
+	public int getTotal_budget() {
 		return total_budget;
 	}
 
-	public void setTotal_budget(String total_budget) {
+	public void setTotal_budget(int total_budget) {
 		this.total_budget = total_budget;
 	}
 
-	public String getRemaining_budget() {
+	public int getRemaining_budget() {
 		return remaining_budget;
 	}
 
-	public void setRemaining_budget(String remaining_budget) {
+	public void setRemaining_budget(int remaining_budget) {
 		this.remaining_budget = remaining_budget;
 	}
 
@@ -50,27 +50,27 @@ public class Platform {
 		this.end_date = end_date;
 	}
 
-	public TargetAudiance getTarget_audiance() {
+	public JsonTargetAudience getTarget_audiance() {
 		return target_audiance;
 	}
 
-	public void setTarget_audiance(TargetAudiance target_audiance) {
+	public void setTarget_audiance(JsonTargetAudience target_audiance) {
 		this.target_audiance = target_audiance;
 	}
 
-	public Creatives getCreatives() {
+	public JsonCreatives getCreatives() {
 		return creatives;
 	}
 
-	public void setCreatives(Creatives creatives) {
+	public void setCreatives(JsonCreatives creatives) {
 		this.creatives = creatives;
 	}
 
-	public Insights getInsights() {
+	public JsonInsights getInsights() {
 		return insights;
 	}
 
-	public void setInsights(Insights insights) {
+	public void setInsights(JsonInsights insights) {
 		this.insights = insights;
 	}
 

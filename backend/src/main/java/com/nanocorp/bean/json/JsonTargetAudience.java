@@ -1,11 +1,11 @@
-package com.nanocorp.bean;
+package com.nanocorp.bean.json;
 
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class TargetAudiance {
+public class JsonTargetAudience {
 
 	private List<String> languages;
 	private List<String> genders;

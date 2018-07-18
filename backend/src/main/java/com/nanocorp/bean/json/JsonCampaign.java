@@ -1,6 +1,6 @@
-package com.nanocorp.bean;
+package com.nanocorp.bean.json;
 
-public class Campaign {
+public class JsonCampaign {
 
 	private long id;
 
@@ -12,7 +12,7 @@ public class Campaign {
 
 	private String status;
 
-	private Platforms platforms;
+	private JsonPlatforms platforms;
 
 	public long getId() {
 		return id;
@@ -54,11 +54,11 @@ public class Campaign {
 		this.status = status;
 	}
 
-	public Platforms getPlatforms() {
+	public JsonPlatforms getPlatforms() {
 		return platforms;
 	}
 
-	public void setPlatforms(Platforms platforms) {
+	public void setPlatforms(JsonPlatforms platforms) {
 		this.platforms = platforms;
 	}
 

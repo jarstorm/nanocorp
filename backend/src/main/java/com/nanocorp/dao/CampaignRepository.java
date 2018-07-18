@@ -1,13 +1,15 @@
-package com.nanocorp;
+package com.nanocorp.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface UserRepository extends JpaRepository<CustomUser, String> {
+import com.nanocorp.bean.db.Campaign;
 
-	@Query("from CustomUser where username = :username")
-	CustomUser findByUsername(@Param("username") String username);
+@Repository
+public interface CampaignRepository extends JpaRepository<Campaign, String> {
+
+	@Query("from Campaign")
+	Campaign findByUsername(@Param("username") String username);
 }
