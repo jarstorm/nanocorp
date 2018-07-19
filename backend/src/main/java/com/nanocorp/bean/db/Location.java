@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+/**
+ * Location database entity
+ */
 @Entity
 @Table(name = "NC_LOCATION")
 public class Location implements Serializable {
@@ -18,6 +21,9 @@ public class Location implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	/**
+	 * Location code
+	 */
 	@Column(name = "L_CODE")
 	private String code;
 

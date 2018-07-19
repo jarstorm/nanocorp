@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+/**
+ * Keyword database object
+ */
 @Entity
 @Table(name = "NC_KEYWORD")
 public class Keyword implements Serializable {
@@ -18,6 +21,9 @@ public class Keyword implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	/**
+	 * Keyword code
+	 */
 	@Column(name = "K_CODE")
 	private String code;
 

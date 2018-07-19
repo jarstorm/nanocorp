@@ -4,11 +4,14 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+/**
+ * Interest database object
+ */
 @Entity
 @Table(name = "NC_INTEREST")
 public class Interest implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1137662211285731652L;
 
 	/**
 	 * Interest id
@@ -18,6 +21,9 @@ public class Interest implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	/**
+	 * Interest code
+	 */
 	@Column(name = "I_CODE")
 	private String code;
 

@@ -1,5 +1,8 @@
 package com.nanocorp.bean.dto;
 
+/**
+ * Class to transform from DB object to DTO insights
+ */
 public class InsightsDto {
 
 	private long id;

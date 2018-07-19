@@ -2,6 +2,9 @@ package com.nanocorp.bean.dto;
 
 import java.util.List;
 
+/**
+ * Class to transform from DB object to DTO campaign
+ */
 public class CampaignDto {
 
 	private long id;

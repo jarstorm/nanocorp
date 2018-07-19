@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.nanocorp.bean.db.Gender;
 
+/**
+ * Gender repository object
+ */
 @Repository
 public interface GenderRepository extends JpaRepository<Gender, Long> {
 

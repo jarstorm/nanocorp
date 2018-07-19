@@ -1,5 +1,8 @@
 package com.nanocorp.bean.json;
 
+/**
+ * Read JSON data for insights
+ */
 public class JsonInsights {
 
 	private long impressions;

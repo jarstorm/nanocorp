@@ -1,5 +1,8 @@
 package com.nanocorp.bean.json;
 
+/**
+ * Read JSON data for platform
+ */
 public class JsonPlatform {
 	private String status;
 	private int total_budget;

@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+ * Read JSON data for target audience
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class JsonTargetAudience {
 

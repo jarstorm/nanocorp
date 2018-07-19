@@ -13,6 +13,9 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nanocorp.bean.json.JsonCampaign;
 
+/**
+ * Read data from data.json. Every time the application wakes up readJsonValues is executed
+ */
 @Component
 public class DataReader {
 

@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.nanocorp.bean.db.Keyword;
 
+/**
+ * Keyword repository object
+ */
 @Repository
 public interface KeywordRepository extends JpaRepository<Keyword, Long> {
 

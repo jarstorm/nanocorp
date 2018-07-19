@@ -3,6 +3,9 @@ package com.nanocorp.bean.dto;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Class to transform from DB object to DTO target audience
+ */
 public class TargetAudienceDto {
 	private long id;
 

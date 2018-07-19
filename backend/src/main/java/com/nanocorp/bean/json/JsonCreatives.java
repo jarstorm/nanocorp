@@ -2,6 +2,9 @@ package com.nanocorp.bean.json;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+ * Read JSON data for creative
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class JsonCreatives {
 

@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+/**
+ * Language database object
+ */
 @Entity
 @Table(name = "NC_LANGUAGE")
 public class Language implements Serializable {
@@ -18,6 +21,9 @@ public class Language implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	/**
+	 * Language code
+	 */
 	@Column(name = "L_CODE")
 	private String code;
 

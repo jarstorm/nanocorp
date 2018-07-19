@@ -5,15 +5,12 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 /**
- * User entity.
+ * User database object.
  */
 @Entity
 @Table(name = "NC_USER")
 public class CustomUser implements Serializable {
 
-	/**
-	 * Serial version UUID.
-	 */
 	private static final long serialVersionUID = 6345527571719641878L;
 
 	/**

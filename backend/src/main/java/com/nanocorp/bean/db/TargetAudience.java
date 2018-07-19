@@ -6,6 +6,9 @@ import java.util.Set;
 
 import javax.persistence.*;
 
+/**
+ * Target audience database object
+ */
 @Entity
 @Table(name = "NC_TARGET_AUDIENCE")
 public class TargetAudience implements Serializable {
@@ -20,38 +23,62 @@ public class TargetAudience implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	/**
+	 * Platform
+	 */
 	@OneToOne(mappedBy="targetAudience")
 	@PrimaryKeyJoinColumn
 	private Platform platform;
 
+	/**
+	 * Languages
+	 */
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "NC_TARGET_LANGUAGE", joinColumns = { @JoinColumn(name = "TA_ID") }, inverseJoinColumns = {
 			@JoinColumn(name = "L_ID") })
 	private Set<Language> languages = new HashSet<>();
 
+	/**
+	 * Genders
+	 */
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "NC_TARGET_GENDER", joinColumns = { @JoinColumn(name = "TA_ID") }, inverseJoinColumns = {
 			@JoinColumn(name = "G_ID") })
 	private Set<Gender> genders = new HashSet<>();
 
+	/**
+	 * Locations
+	 */
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "NC_TARGET_LOCATION", joinColumns = { @JoinColumn(name = "TA_ID") }, inverseJoinColumns = {
 			@JoinColumn(name = "L_ID") })
 	private Set<Location> locations = new HashSet<>();
 
+	/**
+	 * Interests
+	 */
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "NC_TARGET_INTEREST", joinColumns = { @JoinColumn(name = "TA_ID") }, inverseJoinColumns = {
 			@JoinColumn(name = "I_ID") })
 	private Set<Interest> interests = new HashSet<>();
 
+	/**
+	 * Keywords
+	 */
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "NC_TARGET_KEYWORD", joinColumns = { @JoinColumn(name = "TA_ID") }, inverseJoinColumns = {
 			@JoinColumn(name = "K_ID") })
 	private Set<Keyword> keywords = new HashSet<>();
 
+	/**
+	 * Age min
+	 */
 	@Column(name = "TA_AGE_MIN")
 	private int ageMin;
 
+	/**
+	 * Age max
+	 */
 	@Column(name = "TA_AGE_MAX")
 	private int ageMax;
 

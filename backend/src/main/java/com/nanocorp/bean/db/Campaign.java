@@ -6,6 +6,9 @@ import java.util.List;
 
 import javax.persistence.*;
 
+/**
+ * Campaign database object
+ */
 @Entity
 @Table(name = "NC_CAMPAIGN")
 public class Campaign implements Serializable {
@@ -37,6 +40,9 @@ public class Campaign implements Serializable {
 	@Column(name = "C_TOTAL_BUDGET")
 	private int totalBudget;
 
+	/**
+	 * Platforms
+	 */
 	@OneToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
 	@JoinColumn(name = "P_CAMPAIGN", referencedColumnName = "C_ID")
 	private List<Platform> platforms = new ArrayList<>();

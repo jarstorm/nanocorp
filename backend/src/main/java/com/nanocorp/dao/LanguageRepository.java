@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.nanocorp.bean.db.Language;
 
+/**
+ * Language repository object
+ */
 @Repository
 public interface LanguageRepository extends JpaRepository<Language, Long> {
 

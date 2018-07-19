@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+/**
+ * Insights database object
+ */
 @Entity
 @Table(name = "NC_INSIGHTS")
 public class Insights implements Serializable {
@@ -18,30 +21,57 @@ public class Insights implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	/**
+	 * Impressions
+	 */
 	@Column(name = "I_IMPRESSIONS")
 	private long impressions;
 
+	/**
+	 * Clicks
+	 */
 	@Column(name = "I_CLICKS")
 	private long clicks;
 
+	/**
+	 * Website visits
+	 */
 	@Column(name = "I_WEBSITE_VISITS")
 	private long websiteVisits;
 
+	/**
+	 * Nanos score
+	 */
 	@Column(name = "I_NANOS_SCORE")
 	private float nanosScore;
 
+	/**
+	 * Cost per click
+	 */
 	@Column(name = "I_COST_CLICK")
 	private float costPerClick;
 
+	/**
+	 * Click trough rate
+	 */
 	@Column(name = "I_CLICK_RATE")
 	private float clickThroughRate;
 
+	/**
+	 * Kpi1
+	 */
 	@Column(name = "I_KPI_1")
 	private float kpi1;
 
+	/**
+	 * Kpi2
+	 */
 	@Column(name = "I_KPI_2")
 	private float kpi2;
 
+	/**
+	 * Platform
+	 */
 	@OneToOne(mappedBy="insights")
 	@PrimaryKeyJoinColumn
 	private Platform platform;

@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.nanocorp.bean.db.Interest;
 
+/**
+ * Interest repository object
+ */
 @Repository
 public interface InterestRepository extends JpaRepository<Interest, Long> {
 

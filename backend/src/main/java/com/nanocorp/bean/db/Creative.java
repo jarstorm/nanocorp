@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+/**
+ * Creative database object
+ */
 @Entity
 @Table(name = "NC_CREATIVE")
 public class Creative implements Serializable {
@@ -18,30 +21,51 @@ public class Creative implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	/**
+	 * Header
+	 */
 	@Column(name = "C_HEADER")
 	@Lob
 	private String header;
 
+	/**
+	 * Header 1
+	 */
 	@Column(name = "C_HEADER_1")
 	@Lob
 	private String header1;
 
+	/**
+	 * Header 2
+	 */
 	@Column(name = "C_HEADER_2")
 	@Lob
 	private String header2;
 
+	/**
+	 * Description
+	 */
 	@Column(name = "C_DESCRIPTION")
 	@Lob
 	private String description;
 
+	/**
+	 * Url
+	 */
 	@Column(name = "C_URL")
 	@Lob
 	private String url;
 
+	/**
+	 * Image
+	 */
 	@Column(name = "C_IMAGE")
 	@Lob
 	private String image;
 
+	/**
+	 * Platform
+	 */
 	@OneToOne(mappedBy="creative")
 	@PrimaryKeyJoinColumn
 	private Platform platform;

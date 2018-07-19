@@ -1,5 +1,8 @@
 package com.nanocorp.bean.dto;
 
+/**
+ * Class to transform from DB object to DTO creative
+ */
 public class CreativeDto {
 	private long id;
 

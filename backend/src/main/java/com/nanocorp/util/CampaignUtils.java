@@ -5,8 +5,16 @@ import java.util.*;
 import com.nanocorp.bean.db.*;
 import com.nanocorp.bean.dto.*;
 
+/**
+ * Campaign utils class
+ */
 public class CampaignUtils {
 
+	/**
+	 * Transform campaign DB object to DTO object
+	 * @param campaign DB campaign object
+	 * @return DTO campaign object
+	 */
 	public static CampaignDto transformFromDbObject(Campaign campaign) {
 		CampaignDto dto = new CampaignDto();
 		dto.setId(campaign.getId());
@@ -17,6 +25,11 @@ public class CampaignUtils {
 		return dto;
 	}
 
+	/**
+	 * Get platform from DB object
+	 * @param campaign campaign DB object
+	 * @return platforms DTO list
+	 */
 	private static List<PlatformDto> getPlatforms(Campaign campaign) {
 		List<PlatformDto> platforms = new ArrayList<>();
 		for (Platform platform : campaign.getPlatforms()) {
@@ -34,6 +47,11 @@ public class CampaignUtils {
 		return platforms;
 	}
 
+	/**
+	 * Get target audience DTO
+	 * @param targetAudience target audience DB object
+	 * @return target audience DTO object
+	 */
 	private static TargetAudienceDto getTargetAudience(TargetAudience targetAudience) {
 		TargetAudienceDto targetAudienceDto = null;
 		if (targetAudience != null) {
@@ -75,6 +93,11 @@ public class CampaignUtils {
 		return targetAudienceDto;
 	}
 
+	/**
+	 * Get insights DTO object
+	 * @param insights insights DB object
+	 * @return insights DTO object
+	 */
 	private static InsightsDto getInsights(Insights insights) {
 		InsightsDto insightsDto = null;
 		if (insights != null) {
@@ -92,6 +115,11 @@ public class CampaignUtils {
 		return insightsDto;
 	}
 
+	/**
+	 * Get creative DTO object
+	 * @param creative creative DB object
+	 * @return creative DTO object
+	 */
 	private static CreativeDto getCreatives(Creative creative) {
 		CreativeDto creativeDto = null;
 		if (creative != null) {

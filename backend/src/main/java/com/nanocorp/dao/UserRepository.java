@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.nanocorp.bean.db.CustomUser;
 
+/**
+ * CustomUser repository object
+ */
 @Repository
 public interface UserRepository extends JpaRepository<CustomUser, String> {
 

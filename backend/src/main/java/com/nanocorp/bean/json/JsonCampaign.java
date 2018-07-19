@@ -1,5 +1,8 @@
 package com.nanocorp.bean.json;
 
+/**
+ * Read JSON data for campaign
+ */
 public class JsonCampaign {
 
 	private long id;

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.nanocorp</groupId>
 	<artifactId>project</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -11,8 +11,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<jwt.version>0.7.0</jwt.version>
 		<commons-io.version>2.5</commons-io.version>
-		<jersey.version>1.8</jersey.version>
-		<junit.version>4.11</junit.version>
+		<jersey.version>1.8</jersey.version>		
 		<mysql.version>8.0.11</mysql.version>
 		<jackson.version>2.9.6</jackson.version>
 	</properties>
@@ -38,6 +37,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- Test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
 		<!-- Misc -->
 		<dependency>
@@ -68,5 +72,20 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- Jersey -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<scope>test</scope>
+			<version>${jersey.version}</version>
+		</dependency>
 	</dependencies>
+	<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+</build>
 </project>

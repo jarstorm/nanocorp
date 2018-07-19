@@ -1,5 +1,8 @@
 package com.nanocorp.bean.dto;
 
+/**
+ * Class to transform from DB object to DTO platform
+ */
 public class PlatformDto {
 
 	private long id;

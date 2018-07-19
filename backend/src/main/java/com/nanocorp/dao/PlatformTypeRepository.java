@@ -5,6 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import com.nanocorp.bean.db.PlatformType;
 
+/**
+ * PlatformType repository object
+ */
 @Repository
 public interface PlatformTypeRepository extends JpaRepository<PlatformType, Long> {
 

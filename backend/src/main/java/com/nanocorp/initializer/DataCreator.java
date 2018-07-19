@@ -11,13 +11,27 @@ import com.nanocorp.bean.db.*;
 import com.nanocorp.bean.json.*;
 import com.nanocorp.dao.*;
 
+/**
+ * Store in DB data read from data.json
+ */
 @Component
 public class DataCreator {
 
 	private static Logger logger = LoggerFactory.getLogger(DataCreator.class);
 
+	/**
+	 * Google platform id
+	 */
 	private final long GOOGLE_PLATFORM_ID = 1;
+
+	/**
+	 * Instagram platform id
+	 */
 	private final long INSTAGRAM_PLATFORM_ID = 2;
+
+	/**
+	 * Facebook platform id
+	 */
 	private final long FACEBOOK_PLATFORM_ID = 3;
 
 	@Autowired
@@ -44,6 +58,10 @@ public class DataCreator {
 	@Autowired
 	private UserRepository userRepository;
 
+	/**
+	 * Create data in DB from json data
+	 * @param campaigns
+	 */
 	public void createData(JsonCampaign[] campaigns) {
 		// Clear previous data
 		campaignRepository.deleteAll();
@@ -72,6 +90,7 @@ public class DataCreator {
 		ptInstagram.setName("Instagram");
 		platformTypeRepository.save(ptInstagram);
 
+		// Create campaigns
 		for (JsonCampaign campaign : campaigns) {
 			Campaign c = new Campaign();
 			c.setId(campaign.getId());
@@ -168,6 +187,11 @@ public class DataCreator {
 		return targetAudience;
 	}
 
+	/**
+	 * Read keywords
+	 * @param jsonTargetAudience json target audience data
+	 * @param targetAudience target audience DB object
+	 */
 	private void readKeywords(JsonTargetAudience jsonTargetAudience, TargetAudience targetAudience) {
 		Set<Keyword> keywords = new HashSet<>();
 		if (jsonTargetAudience.getKeyWords() != null) {
@@ -184,6 +208,11 @@ public class DataCreator {
 		targetAudience.setKeywords(keywords);
 	}
 
+	/**
+	 * Read interests
+	 * @param jsonTargetAudience json target audience data
+	 * @param targetAudience target audience DB object
+	 */
 	private void readInterests(JsonTargetAudience jsonTargetAudience, TargetAudience targetAudience) {
 		Set<Interest> interests = new HashSet<>();
 		if (jsonTargetAudience.getInterests() != null) {
@@ -200,6 +229,11 @@ public class DataCreator {
 		targetAudience.setInterests(interests);
 	}
 
+	/**
+	 * Read locations
+	 * @param jsonTargetAudience json target audience data
+	 * @param targetAudience target audience DB object
+	 */
 	private void readLocations(JsonTargetAudience jsonTargetAudience, TargetAudience targetAudience) {
 		Set<Location> locations = new HashSet<>();
 		if (jsonTargetAudience.getLocations() != null) {
@@ -216,6 +250,11 @@ public class DataCreator {
 		targetAudience.setLocations(locations);
 	}
 
+	/**
+	 * Read genders
+	 * @param jsonTargetAudience json target audience data
+	 * @param targetAudience target audience DB object
+	 */
 	private void readGenders(JsonTargetAudience jsonTargetAudience, TargetAudience targetAudience) {
 		Set<Gender> genders = new HashSet<>();
 		if (jsonTargetAudience.getGenders() != null) {
@@ -232,6 +271,11 @@ public class DataCreator {
 		targetAudience.setGenders(genders);
 	}
 
+	/**
+	 * Read languages
+	 * @param jsonTargetAudience json target audience data
+	 * @param targetAudience target audience DB object
+	 */
 	private void readLanguages(JsonTargetAudience jsonTargetAudience, TargetAudience targetAudience) {
 		Set<Language> languages = new HashSet<>();
 		if (jsonTargetAudience.getLanguages() != null) {

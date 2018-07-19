@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.nanocorp.bean.db.Location;
 
+/**
+ * Location repository object
+ */
 @Repository
 public interface LocationRepository extends JpaRepository<Location, Long> {
 

@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+/**
+ * Gender database object
+ */
 @Entity
 @Table(name = "NC_GENDER")
 public class Gender implements Serializable {
@@ -18,6 +21,9 @@ public class Gender implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	/**
+	 * Gender code
+	 */
 	@Column(name = "G_CODE")
 	private String code;
 

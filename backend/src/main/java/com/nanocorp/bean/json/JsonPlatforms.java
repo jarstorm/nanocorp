@@ -1,11 +1,23 @@
 package com.nanocorp.bean.json;
 
+/**
+ * Read JSON data for platforms
+ */
 public class JsonPlatforms {
 
+	/**
+	 * Facebook platform
+	 */
 	private JsonPlatform facebook;
 
+	/**
+	 * Instagram platform
+	 */
 	private JsonPlatform instagram;
 
+	/**
+	 * Google platform
+	 */
 	private JsonPlatform google;
 
 	public JsonPlatform getFacebook() {
