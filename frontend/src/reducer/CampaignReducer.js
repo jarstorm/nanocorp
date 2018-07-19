@@ -8,8 +8,7 @@ const INITIAL_STATE = {
   detail: { platforms: []}
 };
 
-export default (state = INITIAL_STATE, action) => {
-	console.log(action);
+export default (state = INITIAL_STATE, action) => {	
   switch (action.type) {
     case LOADED_CAMPAIGNS:
       return { ...state, data: action.payload};    

@@ -10,8 +10,7 @@ class Detail extends Component {
 	}
 
   	render() {
-	  	const {data} = this.props;
-	  	console.log(data);
+	  	const {data} = this.props;	  	
 	    return (
 	      <div>
 	        <Link to="">Back</Link>

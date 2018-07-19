@@ -9,8 +9,7 @@ const INITIAL_STATE = {
   error: ''
 };
 
-export default (state = INITIAL_STATE, action) => {
-	console.log(action);
+export default (state = INITIAL_STATE, action) => {	
   switch (action.type) {
     case LOGIN_OK:      
       return { ...state, logged: true, error: '' };

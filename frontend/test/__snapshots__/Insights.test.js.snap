@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Draw Insights component 1`] = `
+<div>
+  <p>
+    <b>
+      Insights
+    </b>
+  </p>
+  <p>
+    Clicks: 
+    100
+  </p>
+  <p>
+    Clicks through rate: 
+  </p>
+  <p>
+    Cost per click: 
+  </p>
+  <p>
+    Impressions: 
+  </p>
+  <p>
+    Kpi1: 
+    1.0
+  </p>
+  <p>
+    Kpi2: 
+  </p>
+  <p>
+    Nanos score: 
+  </p>
+  <p>
+    Website visits: 
+  </p>
+</div>
+`;

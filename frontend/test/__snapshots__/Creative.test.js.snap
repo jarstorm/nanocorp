@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Draw Creative component 1`] = `
+<div>
+  <p>
+    <b>
+      Creative
+    </b>
+  </p>
+  <p>
+    Description: 
+    description
+  </p>
+  <p>
+    Header: 
+  </p>
+  <p>
+    Header1: 
+    header1
+  </p>
+  <p>
+    Header2: 
+    header2
+  </p>
+  <p>
+    Image: 
+  </p>
+  <img
+    src="http://localhost:8090/images/image"
+  />
+  <p>
+    Url: 
+    url
+  </p>
+</div>
+`;

@@ -11,7 +11,7 @@ export default class Creative extends Component {
 	      	<p>Description: {data.description}</p>
 	      	<p>Header: {data.header}</p>
 	      	<p>Header1: {data.header1}</p>
-	      	<p>header2: {data.header2}</p>
+	      	<p>Header2: {data.header2}</p>
 	      	<p>Image: </p><img src={SERVER_URL + "/images/" + data.image} />
 	      	<p>Url: {data.url}</p>
 	      </div>
