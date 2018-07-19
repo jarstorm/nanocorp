@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter } from "react-router-dom";
 import Home from './Home';
-import MainPage from './MainPage';
+import Detail from './components/Detail';
 
 export default class AppRouter extends Component {
   render() {
@@ -9,7 +9,7 @@ export default class AppRouter extends Component {
       <BrowserRouter>
         <div>
           <Route exact path="/" component={Home} />
-          <Route path="/main" component={MainPage} />
+          <Route path="/detail/:campaignId" component={Detail} />
         </div>
       </BrowserRouter>
     )

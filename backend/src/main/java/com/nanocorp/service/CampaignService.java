@@ -1,8 +1,12 @@
 package com.nanocorp.service;
 
-import com.nanocorp.bean.db.Campaign;
+import java.util.List;
+
+import com.nanocorp.bean.dto.CampaignDto;
 
 public interface CampaignService {
 
-	Campaign findById(long id);
+	CampaignDto findById(long id);
+
+	List<CampaignDto> findAll();
 }

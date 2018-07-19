@@ -41,11 +41,22 @@ public class DataCreator {
 	@Autowired
 	private KeywordRepository keywordRepository;
 
+	@Autowired
+	private UserRepository userRepository;
+
 	public void createData(JsonCampaign[] campaigns) {
 		// Clear previous data
 		campaignRepository.deleteAll();
 		platformTypeRepository.deleteAll();
+		userRepository.deleteAll();
 
+		// Create user
+		CustomUser user = new CustomUser();
+		user.setUsername("test");
+		user.setPassword("$2a$12$hyGQ0pQigg6p4ZqaqhFALelApxqtHg51lTj/dr9ybq7ogl/69pjoO");
+		userRepository.save(user);
+
+		// Create platform types
 		PlatformType ptGoogle = new PlatformType();
 		ptGoogle.setId(GOOGLE_PLATFORM_ID);
 		ptGoogle.setName("Google");

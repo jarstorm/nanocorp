@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import MainReducer from './MainReducer';
+import CampaignReducer from './CampaignReducer';
+import AppReducer from './AppReducer';
 
 export default combineReducers({
-  main: MainReducer
+  app: AppReducer,	
+  campaign: CampaignReducer
 });

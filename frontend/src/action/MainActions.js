@@ -1,21 +1,65 @@
+import axios from 'axios';
 import {
   RELOAD_DATA,
   LOADED_DATA,
   RELOAD_CHILDREN,
   LOADED_CHILDREN,
-  LOAD_USER
+  LOAD_USER,
+  LOGIN_OK,
+  LOGIN_KO,
+  LOADED_CAMPAIGNS,
+  LOADED_CAMPAIGN_DETAIL
 } from './types';
+
+const SERVER_BASE_URL = "http://localhost:8090";
+
+export const login = (user, password) => {
+  const url = SERVER_BASE_URL + "/login?username=" + user + "&password=" + password; 
+  return (dispatch) => {    
+    axios.post(url)
+    .then(data => { localStorage.setItem('TOKEN', data.data.token); dispatch({ type: LOGIN_OK })})
+    .catch(err => dispatch({ type: LOGIN_KO }));
+  };
+};
+
+export const loadCampaignsData = () => {
+  const url = SERVER_BASE_URL + "/campaign"; 
+  const token = localStorage.getItem('TOKEN');
+  const options = {   
+     headers: {
+       'Authorization': token
+     }
+  };
+  return (dispatch) => {    
+    axios.get(url, options)
+    .then(data => dispatch({ type: LOADED_CAMPAIGNS, payload: data.data }))
+    .catch(err => console.log(err));
+  };
+};
+
+export const loadCampaign = (campaignId) => {
+  const url = SERVER_BASE_URL + "/campaign/" + campaignId; 
+  const token = localStorage.getItem('TOKEN');
+  const options = {   
+     headers: {
+       'Authorization': token
+     }
+  };
+  return (dispatch) => {    
+    axios.get(url, options)
+    .then(data => dispatch({ type: LOADED_CAMPAIGN_DETAIL, payload: data.data }))
+    .catch(err => console.log(err));
+  };
+};
 
 
 export const loadData = () => {
   return (dispatch) => {
   	dispatch({ type: RELOAD_DATA });
-    fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
+    fetch(SERVER_BASE_URL + "/campaign")
     .then(data => data.json())
     .then(data => {
-      for (var i = 0; i < 20; i++) {
-        getElement(data[i], dispatch, LOADED_DATA);
-      }
+      console.log(data);      
     });
 
   };
