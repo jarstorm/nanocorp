@@ -22,7 +22,7 @@ class Login extends Component {
 	}
 
   	render() {
-  		//const {data} = this.props;
+  		const {error} = this.props;
 	    return (
 	      <div>	        			  
 			  <div className="container">
@@ -33,14 +33,15 @@ class Login extends Component {
 			    <input type="password" placeholder="Enter Password" name="psw" required onChange={(e) => this._updatePassword(e)}/>
 
 			    <button type="button" onClick={() => this._handleLogin()}>Login</button>			    
+			    <p>{error}</p>			    
 			  </div>			  
 	      </div>
 	    )
   	}
 }
 
-function mapStateToProps({ campaign }) {  
-  return { data: campaign.data };
+function mapStateToProps({ app }) {  
+  return app;
 }
 
 export default connect(mapStateToProps, actions)(Login);

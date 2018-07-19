@@ -1,25 +1,23 @@
 import {
-  LOADED_DATA,
-  LOADED_CHILDREN,
-  RELOAD_DATA,
-  RELOAD_CHILDREN,
-  LOAD_USER,
   LOGIN_OK,
-  LOGIN_KO
+  LOGIN_KO,
+  LOGOUT
 } from '../action/types';
 
 const INITIAL_STATE = {
   logged: false,
-  token: null
+  error: ''
 };
 
 export default (state = INITIAL_STATE, action) => {
 	console.log(action);
   switch (action.type) {
     case LOGIN_OK:      
-      return { ...state, logged: true };
+      return { ...state, logged: true, error: '' };
     case LOGIN_KO:
-      return { ...state, logged: false };    
+      return { ...state, logged: false, error: 'User or password not valid' };    
+    case LOGOUT:
+      return INITIAL_STATE;      
     default:
       return state;
   }

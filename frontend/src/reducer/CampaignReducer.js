@@ -1,16 +1,11 @@
-import {
-  LOADED_DATA,
-  LOADED_CHILDREN,
-  RELOAD_DATA,
-  RELOAD_CHILDREN,
-  LOAD_USER,
+import {  
   LOADED_CAMPAIGNS,
   LOADED_CAMPAIGN_DETAIL
 } from '../action/types';
 
 const INITIAL_STATE = {
   data: [],
-  detail: {}
+  detail: { platforms: []}
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -19,7 +14,7 @@ export default (state = INITIAL_STATE, action) => {
     case LOADED_CAMPAIGNS:
       return { ...state, data: action.payload};    
     case LOADED_CAMPAIGN_DETAIL:
-      return { ...state, data: action.payload, detail: action.payload};      
+      return { ...state, detail: action.payload};      
     default:
       return state;
   }

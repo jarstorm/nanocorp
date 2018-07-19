@@ -36,7 +36,7 @@ public class Platform implements Serializable {
 	private Creative creative;
 
 	@OneToOne(cascade = CascadeType.MERGE)
-	@JoinColumn(name = "P_ID")
+	@JoinColumn(name = "I_ID")
 	private Insights insights;
 
 	@OneToOne(cascade = CascadeType.MERGE)

@@ -10,6 +10,7 @@ import com.nanocorp.bean.db.Campaign;
 import com.nanocorp.bean.dto.CampaignDto;
 import com.nanocorp.dao.CampaignRepository;
 import com.nanocorp.service.CampaignService;
+import com.nanocorp.util.CampaignUtils;
 
 @Service
 public class CampaignServiceImpl implements CampaignService {
@@ -20,17 +21,7 @@ public class CampaignServiceImpl implements CampaignService {
 	@Override
 	public CampaignDto findById(long id) {
 		Campaign campaign = campaignRepository.findById(id).get();
-		CampaignDto dto = initializeCampaignDto(campaign);
-		return dto;
-	}
-
-	private CampaignDto initializeCampaignDto(Campaign campaign) {
-		CampaignDto dto = new CampaignDto();
-		dto.setId(campaign.getId());
-		dto.setGoal(campaign.getGoal());
-		dto.setName(campaign.getName());
-		dto.setTotalBudget(campaign.getTotalBudget());
-		return dto;
+		return CampaignUtils.transformFromDbObject(campaign);
 	}
 
 	@Override
@@ -38,8 +29,7 @@ public class CampaignServiceImpl implements CampaignService {
 		List<Campaign> campaigns = campaignRepository.findAll();
 		List<CampaignDto> list = new ArrayList<>();
 		for (Campaign campaign: campaigns) {
-			CampaignDto dto = initializeCampaignDto(campaign);
-			list.add(dto);
+			list.add(CampaignUtils.transformFromDbObject(campaign));
 		}
 		return list;
 	}
