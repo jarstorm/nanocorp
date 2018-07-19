@@ -14,12 +14,13 @@ The project uses Spring Boot as the main framework for the app.
 
 It's construcvted using Maven as dependency manager.
 
-It uses MySQL as database to store daat read from data.json file.
+It uses MySQL as database to store data read from data.json file.
 
 To launch it you only need to Run As Java Application the MainAppConfig file. It will create a server in http://localhost:8090
 
 Inside application.properties file you could change MySQL connection parameters.
 
+It uses Spring Security to manage JWT authentication from frontend client.
 
 ## Frontend
 The frontend uses React and Redux as main technologies.
