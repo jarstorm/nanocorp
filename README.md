@@ -44,9 +44,9 @@ The frontend uses React and Redux as main technologies. It uses webpack as a loc
 Inside config.js file you could configure server address.
 
 ### How to launch in develpment mode
-To install it please execute ```yarn install```
+I'm using yarn instead of npm so you need to install it in your machine. To install project dependencies please execute ```yarn install```
 
-After install, to run it please execute ```yarn start```
+After install dependencies please execute ```yarn start``` to run the project
 
 To log in the application please see Valid user section.
 
