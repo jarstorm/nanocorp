@@ -1,12 +1,12 @@
 package com.nanocorp.controller;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.http.HttpHeaders;
 
 import com.sun.jersey.api.client.*;
 import com.sun.jersey.api.client.WebResource.Builder;
+
 /**
  * Test client
  */
@@ -53,7 +53,7 @@ public class TestController {
 	}
 
 	/**
-	 * Test that a logged in user can access to sayHello method
+	 * Test that a logged in user can access to campaigns method
 	 */
 	@Test
 	public void testLoggedUserCanAccess() {
@@ -65,12 +65,12 @@ public class TestController {
 	 * Execute login REST call
 	 *
 	 * @param username
-	 *            user name
+	 *        user name
 	 * @param password
-	 *            user password
+	 *        user password
 	 * @return server token
 	 * @throws RuntimeException
-	 *             exception
+	 *         exception
 	 */
 	private String executeLogin(String username, String password) throws RuntimeException {
 		Client client = Client.create();
@@ -88,13 +88,13 @@ public class TestController {
 	}
 
 	/**
-	 * Execute sayHello REST method
+	 * Execute campaigns REST method
 	 *
 	 * @param token
-	 *            JWS token
+	 *        JWS token
 	 * @return the value from the method
 	 * @throws RuntimeException
-	 *             exception
+	 *         exception
 	 */
 	private String getCampaigns(String token) throws RuntimeException {
 		Client client = Client.create();
