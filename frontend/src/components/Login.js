@@ -24,17 +24,24 @@ class Login extends Component {
   	render() {
   		const {error} = this.props;
 	    return (
-	      <div>	        			  
-			  <div className="container">
-			    <label><b>Username</b></label>
-			    <input type="text" placeholder="Enter Username" name="uname" required onChange={(e) => this._updateUserName(e)}/>
-
-			    <label><b>Password</b></label>
-			    <input type="password" placeholder="Enter Password" name="psw" required onChange={(e) => this._updatePassword(e)}/>
-
-			    <button type="button" onClick={() => this._handleLogin()}>Login</button>			    
-			    <p>{error}</p>			    
-			  </div>			  
+	      <div className="col-md-6 col-md-offset-3 login-container">  
+	      	<div className="panel panel-default">
+	      	  <div className="panel-heading">Login form</div>
+				<div className="panel-body">
+			  	<div className="col-md-12">
+				    <label><b>Username</b></label>
+				    <input type="text" className="form-control" placeholder="Enter Username" name="uname" required onChange={(e) => this._updateUserName(e)}/>
+				</div>
+				<div className="col-md-12">
+				    <label><b>Password</b></label>
+				    <input type="password" className="form-control" placeholder="Enter Password" name="psw" required onChange={(e) => this._updatePassword(e)}/>
+				</div>
+				<div className="col-md-12 login-button">
+			    	<button type="button" className="btn btn-primary pull-right" onClick={() => this._handleLogin()}>Login</button>			    
+			    </div>
+			  </div>
+			  <p className="error-text">{error}</p>			    		
+		    </div>		    		    
 	      </div>
 	    )
   	}

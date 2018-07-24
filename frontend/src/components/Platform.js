@@ -8,14 +8,19 @@ export default class Platform extends Component {
 	  	const {data} = this.props;
 	    return (
 	      <div>	      
-	      	<hr />  	        
-	        <p>Type: {data.platformType} </p>	        
-	        <p>Total budget: {data.totalBudget} </p>	        
-	        <p>Remaining budget: {data.remainingBudget} </p>	        
-	        <p>Status: {data.status} </p>	        
-	        <Insights data={data.insights} />
-	        <TargetAudience data={data.targetAudience} />
-	        <Creative data={data.creative} />
+	      	<div className="panel panel-default">
+			  <div className="panel-heading">
+			    <h3 className="panel-title">Platform <b>{data.platformType}</b></h3>
+			  </div>
+			  <div className="panel-body">
+			    <p>Total budget: {data.totalBudget} </p>	        
+	        	<p>Remaining budget: {data.remainingBudget} </p>	        
+	        	<p>Status: {data.status} </p>	        	        	
+	        	<Insights data={data.insights} />
+	        	<TargetAudience data={data.targetAudience} />
+	        	<Creative data={data.creative} />
+			  </div>
+			</div>	 	        	        
 	      </div>
 	    )
   	}

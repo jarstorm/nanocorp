@@ -5,7 +5,7 @@ export default class TargetAudience extends Component {
 	  	const {data} = this.props;
 	  	if (data !== null) {
 	    return (
-	      <div>	     
+	      <div className="col-md-4">	     
 	      	<p><b>Target audience</b></p> 
 	      	<p>Age min: {data.ageMin}</p>
 	      	<p>Age max: {data.ageMax}</p>

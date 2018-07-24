@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Link } from "react-router-dom";
 import * as actions from './action';
 import { connect } from 'react-redux';
-import Campaigns from './components/Campaigns';
+import CampaignList from './components/CampaignList';
 import Login from './components/Login';
 
 class Home extends Component {
@@ -10,13 +10,13 @@ class Home extends Component {
   		const {logged} = this.props;  		
   		if (logged) {  			
 		    return (
-		      	<Campaigns />
+		      	<CampaignList />
 		    )
 		} else {
 			return (
 				<Login />
 			)
-		}
+		}		
   	}
 }
 

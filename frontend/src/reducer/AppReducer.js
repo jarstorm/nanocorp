@@ -6,7 +6,8 @@ import {
 
 const INITIAL_STATE = {
   logged: false,
-  error: ''
+  error: '',
+  username: ''
 };
 
 export default (state = INITIAL_STATE, action) => {	

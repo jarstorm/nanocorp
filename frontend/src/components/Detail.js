@@ -12,13 +12,22 @@ class Detail extends Component {
   	render() {
 	  	const {data} = this.props;	  	
 	    return (
-	      <div>
-	        <Link to="">Back</Link>
-	        <p>Id: {data.id} </p>
-	        <p>Name: {data.name} </p>
-	        <p>Goal: {data.goal} </p>
-	        <p>Total budget: {data.totalBudget} </p>
-	        {data.platforms.map((p) => <Platform key={p.id} data={p} />)}	        
+	      <div>	      	
+	      	<div className="row">
+	        	<Link className="pull-left" to="">Back</Link>	        
+	        </div>
+	        <div className="panel panel-default">
+			  <div className="panel-heading">
+			    <h3 className="panel-title">Campaign info</h3>
+			  </div>
+			  <div className="panel-body">
+			    <p>Id: {data.id} </p>
+	        	<p>Name: {data.name} </p>
+	        	<p>Goal: {data.goal} </p>
+	        	<p>Total budget: {data.totalBudget} </p>
+			  </div>
+			</div>	  			
+	        {data.platforms.map((p) => <Platform key={p.id} data={p} />)}	        	        
 	      </div>
 	    )
   	}

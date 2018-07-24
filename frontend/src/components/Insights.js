@@ -5,7 +5,7 @@ export default class Insights extends Component {
 	  	const {data} = this.props;
 	  	if (data !== null) {
 	    return (
-	      <div>	  
+	      <div className="col-md-4">	  
 	      	<p><b>Insights</b></p>    
 	      	<p>Clicks: {data.clicks}</p>
 	      	<p>Clicks through rate: {data.clicksThroughRate}</p>

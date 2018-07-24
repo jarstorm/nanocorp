@@ -32,7 +32,7 @@ public class DataReader {
 		logger.info("Reading data from data.json file");
 		ObjectMapper mapper = new ObjectMapper();
 		try {
-			File file = new File(getClass().getClassLoader().getResource("data/data.json").getFile());
+			File file = new File(DataReader.class.getClassLoader().getResource("./data/data.json").getFile());
 			JsonCampaign[] campaigns = mapper.readValue(file, JsonCampaign[].class);
 			dataCreator.createData(campaigns);
 		} catch (IOException e) {

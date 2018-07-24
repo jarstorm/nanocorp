@@ -12,7 +12,7 @@ export const login = (user, password) => {
   const url = SERVER_URL + "/login?username=" + user + "&password=" + password; 
   return (dispatch) => {    
     axios.post(url)
-    .then(data => { localStorage.setItem('TOKEN', data.data.token); dispatch({ type: LOGIN_OK })})
+    .then(data => { localStorage.setItem('TOKEN', data.data.token); dispatch({ type: LOGIN_OK, payload: user })})
     .catch(err => dispatch({ type: LOGIN_KO }));
   };
 };
