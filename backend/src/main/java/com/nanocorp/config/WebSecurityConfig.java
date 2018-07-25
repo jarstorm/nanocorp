@@ -28,9 +28,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
-		httpSecurity.csrf().disable().cors().and().authorizeRequests().antMatchers("/campaign/**").authenticated().antMatchers(
-				ConfigConstants.LOGIN_URL).permitAll().and().addFilter(new AuthenticationFilter(authenticationManager()))
-				.addFilter(new AuthorizationFilter(authenticationManager()));
+		httpSecurity.csrf().disable().cors().and().authorizeRequests().antMatchers("/image**").permitAll().antMatchers(
+				"/campaign/**").authenticated().antMatchers(ConfigConstants.LOGIN_URL).permitAll().and().addFilter(
+						new AuthenticationFilter(authenticationManager())).addFilter(new AuthorizationFilter(
+								authenticationManager()));
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class CampaignServiceImpl implements CampaignService {
 	public List<CampaignDto> findAll() {
 		List<Campaign> campaigns = campaignRepository.findAll();
 		List<CampaignDto> list = new ArrayList<>();
-		for (Campaign campaign: campaigns) {
+		for (Campaign campaign : campaigns) {
 			list.add(CampaignUtils.transformFromDbObject(campaign));
 		}
 		return list;

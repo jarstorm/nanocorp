@@ -13,7 +13,7 @@ export default class Creative extends Component {
 		      	<p>Header1: {data.header1}</p>
 		      	<p>Header2: {data.header2}</p>
 		      	<p>Url: {data.url}</p>
-		      	<p>Image: </p><img src={SERVER_URL + "/images/" + data.image} className="creative-img"/>
+		      	<p>Image: </p><img src={SERVER_URL + "/image/" + data.image} className="creative-img"/>
 		      </div>
 		    )
 		} else {

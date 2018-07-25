@@ -18,4 +18,5 @@ public interface CampaignService {
 	 * Get every campaign in DB
 	 */
 	List<CampaignDto> findAll();
+
 }

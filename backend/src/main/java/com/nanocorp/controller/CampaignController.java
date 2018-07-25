@@ -32,4 +32,5 @@ public class CampaignController {
 	public CampaignDto getCampaign(@PathVariable long id, HttpServletRequest request) {
 		return campaignService.findById(id);
 	}
+
 }
